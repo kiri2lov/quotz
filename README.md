@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Я не использовал базу данных и Active Job, вместо этого написал puma плагин который в фоне вызывает сервис отслеживания изменения курса. Плагин можно найти в папке lib/puma/plugin/
 
-Things you may want to cover:
+Код обновления курса ищите в app/services. Интегральный тест test/integration/main_flow_test.rb
 
-* Ruby version
+Админка реализована на vuejs. Для оформления задействован bootstrap. Коммуникация между клиентом и сервером налажена при помощи Action Cable
 
-* System dependencies
+Для развертывания понадобится yarn:
+```npm install yarn```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Далее по шагам:
+```
+git clone git@github.com:kiri2lov/quotz.git
+cd quotz
+bundle install
+yarn install
+rake test && foreman start
+```
