@@ -1,0 +1,8 @@
+<%= javascript_pack_tag 'welcome' %>
+<div class="container-fluid h-100 wrapper" style="background-color:#051F26">
+  <div class="d-flex align-items-center justify-content-center h-100">
+    <div class="d-flex flex-column p-4"  style="background-color:#1B4D62">
+      <h1 style="color:#f7f7f7">1USD = <span id="quote"><%= @quote.to_f.round(2) %></span>RUB</h1>
+    </div>
+  </div>
+</div>
